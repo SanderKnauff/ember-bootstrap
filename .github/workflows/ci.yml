@@ -32,7 +32,7 @@ jobs:
       - name: Lint
         run: pnpm lint
       - name: Test
-        run: pnpm test:ember
+        run: pnpm test:ember --config-file testem.safari.js
 
   test-no-lock:
     name: Floating Dependencies
