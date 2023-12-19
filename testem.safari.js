@@ -9,6 +9,8 @@ module.exports = {
   browser_disconnect_timeout: 120,
   launch_in_ci: ['Safari'],
   launchers: {
-    Safari: {},
+    Safari: {
+      ci: [],
+    },
   },
 };
