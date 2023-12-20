@@ -16,11 +16,9 @@ jobs:
     name: Test Safari
     runs-on: macos-latest
     steps:
-      - name: List launchers
-        run: npx testem launchers
-#      - name: Checkout code
-#        uses: wyvox/action@v1
-#      - name: Lint
-#        run: pnpm lint
-#      - name: Test
-#        run: pnpm test:ember --config-file testem.safari.js
+      - name: Checkout code
+        uses: wyvox/action@v1
+      - name: Lint
+        run: pnpm lint
+      - name: Test
+        run: pnpm test:ember --config-file testem.safari.js

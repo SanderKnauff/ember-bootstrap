@@ -5,8 +5,8 @@ module.exports = {
   test_page: 'tests/index.html?hidepassed',
   disable_watching: true,
   parallel: 1,
-  browser_start_timeout: 120,
-  browser_disconnect_timeout: 120,
+  browser_start_timeout: 30,
+  browser_disconnect_timeout: 30,
   launch_in_ci: ['Safari'],
   launchers: {
     // Allow safari to proceed without user intervention. See https://github.com/testem/testem/issues/1387
@@ -17,7 +17,7 @@ module.exports = {
         '-e',
         `tell application "Safari"
           activate
-          open location "http://localhost:4200/tests"
+          open location "http://localhost:7357/tests"
          end tell
          delay 3000`,
       ],
