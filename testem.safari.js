@@ -16,10 +16,10 @@ module.exports = {
       args: [
         '-e',
         `tell application "Safari"
-                  activate
-                  open location "http://localhost:4200/tests"
-                 end tell
-                 delay 3000`,
+          activate
+          open location "http://localhost:4200/tests"
+         end tell
+         delay 3000`,
       ],
     },
   },
