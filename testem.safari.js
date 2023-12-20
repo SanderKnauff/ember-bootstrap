@@ -17,7 +17,7 @@ module.exports = {
         '-e',
         `tell application "Safari"
           activate
-          open location "http://localhost:7357/tests"
+          open location "<url>"
          end tell
          delay 3000`,
       ],
