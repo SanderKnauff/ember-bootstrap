@@ -3,7 +3,6 @@ import { action, set } from '@ember/object';
 import { assert } from '@ember/debug';
 import { isPresent } from '@ember/utils';
 import { next } from '@ember/runloop';
-import RSVP from 'rsvp';
 import { getOwnConfig, macroCondition } from '@embroider/macros';
 import arg from '../utils/decorators/arg';
 import { tracked } from '@glimmer/tracking';
@@ -425,7 +424,7 @@ export default class Form extends Component {
     }
 
     if (this.preventConcurrency && this.isSubmitting) {
-      return RSVP.resolve();
+      return Promise.resolve();
     }
 
     let model = this.model;
@@ -434,7 +433,7 @@ export default class Form extends Component {
 
     this.args.onBefore?.(model);
 
-    return RSVP.resolve()
+    return Promise.resolve()
       .then(() => {
         return this.hasValidator ? this.validate(model, this._element) : null;
       })
@@ -444,7 +443,7 @@ export default class Form extends Component {
             this.showAllValidations = false;
           }
 
-          return RSVP.resolve()
+          return Promise.resolve()
             .then(() => {
               return this.args.onSubmit?.(model, record);
             })
@@ -478,7 +477,7 @@ export default class Form extends Component {
             });
         },
         (error) => {
-          return RSVP.resolve()
+          return Promise.resolve()
             .then(() => {
               return this.args.onInvalid?.(model, error);
             })
