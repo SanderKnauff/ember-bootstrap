@@ -3,7 +3,8 @@
   "scripts": {
     "prepare": "husky install",
     "test": "pnpm --filter 'test-app' test",
-    "test:ember": "pnpm --filter 'test-app' test:ember"
+    "test:ember": "pnpm --filter 'test-app' test:ember",
+    "nodetest": "pnpm --filter 'test-app' nodetest"
   },
   "devDependencies": {
     "husky": "8.0.3",
