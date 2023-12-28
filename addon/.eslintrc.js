@@ -52,9 +52,11 @@ module.exports = {
         './.template-lintrc.js',
         './ember-cli-build.js',
         './index.js',
+        './addon-main.js',
         './blueprints/*/index.js',
         './config/**/*.js',
         './lib/**/*.js',
+        './rollup.config.mjs',
       ],
       parserOptions: {
         sourceType: 'script',
