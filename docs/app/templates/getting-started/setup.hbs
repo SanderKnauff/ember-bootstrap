@@ -145,39 +145,7 @@
         </p>
       </td>
     </tr>
-    <tr>
-      <td>include</td>
-      <td>Array of component names</td>
-      <td></td>
-      <td>
-        <p>
-          Component tree shaking: include only the listed components into your
-          build, to reduce your JavaScript bundle size. Components not listed
-          here will not be available. You should use either
-          <code>include</code>
-          or
-          <code>exclude</code>, not both.
-        </p>
-
-        <p>Example:</p>
-        <pre class="highlight"><code>include: ['bs-button', 'bs-modal',
-            'bs-form']</code></pre>
-      </td>
-    </tr>
-    <tr>
-      <td>exclude</td>
-      <td>Array of component names</td>
-      <td></td>
-      <td>
-        <p>
-          Exclude the listed components from your build, to reduce your
-          JavaScript bundle size. See
-          <code>include</code>.
-        </p>
-      </td>
-    </tr>
   </tbody>
-
 </table>
 
 <p>These options can be set in your <code>ember-cli-build.js</code> file:</p>

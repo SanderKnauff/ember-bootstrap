@@ -1,0 +1,219 @@
+{
+  "name": "ember-bootstrap",
+  "version": "6.1.0",
+  "description": "Bootstrap components for Ember.js",
+  "keywords": [
+    "ember-addon",
+    "bootstrap"
+  ],
+  "homepage": "https://www.ember-bootstrap.com/",
+  "bugs": {
+    "url": "https://github.com/ember-bootstrap/ember-bootstrap/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ember-bootstrap/ember-bootstrap"
+  },
+  "license": "MIT",
+  "author": "Simon Ihmig <ihmig@kaliber5.de>",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "exports": {
+    ".": "./dist/index.js",
+    "./*": "./dist/*",
+    "./addon-main.js": "./addon-main.js"
+  },
+  "files": [
+    "addon-main.js",
+    "dist"
+  ],
+  "scripts": {
+    "build": "rollup --config",
+    "prepublishOnly": "rollup --config",
+    "start": "rollup --config --watch",
+    "lint": "concurrently \"npm:lint:*(!fix)\" --names \"lint:\"",
+    "lint:fix": "concurrently \"npm:lint:*:fix\" --names \"fix:\"",
+    "lint:hbs": "ember-template-lint .",
+    "lint:hbs:fix": "ember-template-lint . --fix",
+    "lint:js": "eslint . --cache",
+    "lint:js:fix": "eslint . --fix"
+  },
+  "dependencies": {
+    "@ember/render-modifiers": "^2.0.0",
+    "@embroider/addon-shim": "^1.8.7",
+    "@embroider/util": "^1.12.1",
+    "@embroider/macros": "^1.13.4",
+    "broccoli-debug": "^0.6.3",
+    "broccoli-funnel": "^3.0.8",
+    "broccoli-merge-trees": "^4.2.0",
+    "chalk": "^4.1.1",
+    "ember-cli-build-config-editor": "^0.5.1",
+    "ember-cli-version-checker": "^5.1.2",
+    "ember-concurrency": "^2.1.2 || ^3.0.0",
+    "ember-element-helper": "^0.6.0 || ^0.7.0 || ^0.8.0",
+    "ember-focus-trap": "^1.0.0",
+    "ember-on-helper": "^0.1.0",
+    "ember-popper-modifier": "^2.0.0 || ^3.0.0 || ^4.0.0",
+    "ember-ref-bucket": "^4.0.0 || ^5.0.0",
+    "ember-render-helpers": "^0.2.0",
+    "ember-style-modifier": "^0.8.0 || ^1.0.0 || ^2.0.0 || ^3.0.0",
+    "findup-sync": "^5.0.0",
+    "resolve": "^1.18.1",
+    "silent-error": "^1.0.1",
+    "tracked-toolbox": "^1.2.3 || ^2.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.6",
+    "@babel/eslint-parser": "^7.23.3",
+    "@babel/plugin-proposal-decorators": "^7.23.6",
+    "@babel/plugin-transform-class-properties": "^7.23.3",
+    "@embroider/addon-dev": "^4.1.3",
+    "@rollup/plugin-babel": "^6.0.4",
+    "concurrently": "8.2.2",
+    "ember-template-lint": "5.13.0",
+    "ember-template-lint-plugin-prettier": "5.0.0",
+    "eslint": "8.56.0",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-plugin-ember": "11.12.0",
+    "eslint-plugin-hbs": "1.0.3",
+    "eslint-plugin-n": "16.5.0",
+    "eslint-plugin-prettier": "5.1.1",
+    "eslint-plugin-qunit": "8.0.1",
+    "rollup": "^4.9.1"
+  },
+  "peerDependencies": {
+    "@glimmer/component": "^1.0.4",
+    "@glimmer/tracking": "^1.0.4",
+    "ember-source": ">=4.8.0"
+  },
+  "engines": {
+    "node": "18.* || >= 20"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "changelog": {
+    "labels": {
+      "breaking": ":boom: Breaking Change",
+      "enhancement": "Features",
+      "bug": "Bug Fixes",
+      "documentation": "Documentation",
+      "internal": "Internal"
+    }
+  },
+  "ember": {
+    "edition": "octane"
+  },
+  "ember-addon": {
+    "main": "addon-main.js",
+    "type": "addon",
+    "version": 2,
+    "versionCompatibility": {
+      "ember": ">=4.8.0"
+    },
+    "demoURL": "https://www.ember-bootstrap.com",
+    "app-js": {
+      "./components/bs-accordion.js": "./dist/_app_/components/bs-accordion.js",
+      "./components/bs-accordion/item.js": "./dist/_app_/components/bs-accordion/item.js",
+      "./components/bs-accordion/item/body.js": "./dist/_app_/components/bs-accordion/item/body.js",
+      "./components/bs-accordion/item/title.js": "./dist/_app_/components/bs-accordion/item/title.js",
+      "./components/bs-alert.js": "./dist/_app_/components/bs-alert.js",
+      "./components/bs-button-group.js": "./dist/_app_/components/bs-button-group.js",
+      "./components/bs-button-group/button.js": "./dist/_app_/components/bs-button-group/button.js",
+      "./components/bs-button.js": "./dist/_app_/components/bs-button.js",
+      "./components/bs-carousel.js": "./dist/_app_/components/bs-carousel.js",
+      "./components/bs-carousel/slide.js": "./dist/_app_/components/bs-carousel/slide.js",
+      "./components/bs-collapse.js": "./dist/_app_/components/bs-collapse.js",
+      "./components/bs-contextual-help.js": "./dist/_app_/components/bs-contextual-help.js",
+      "./components/bs-contextual-help/element.js": "./dist/_app_/components/bs-contextual-help/element.js",
+      "./components/bs-dropdown.js": "./dist/_app_/components/bs-dropdown.js",
+      "./components/bs-dropdown/button.js": "./dist/_app_/components/bs-dropdown/button.js",
+      "./components/bs-dropdown/menu.js": "./dist/_app_/components/bs-dropdown/menu.js",
+      "./components/bs-dropdown/menu/divider.js": "./dist/_app_/components/bs-dropdown/menu/divider.js",
+      "./components/bs-dropdown/menu/item.js": "./dist/_app_/components/bs-dropdown/menu/item.js",
+      "./components/bs-dropdown/toggle.js": "./dist/_app_/components/bs-dropdown/toggle.js",
+      "./components/bs-form.js": "./dist/_app_/components/bs-form.js",
+      "./components/bs-form/element.js": "./dist/_app_/components/bs-form/element.js",
+      "./components/bs-form/element/control.js": "./dist/_app_/components/bs-form/element/control.js",
+      "./components/bs-form/element/control/checkbox.js": "./dist/_app_/components/bs-form/element/control/checkbox.js",
+      "./components/bs-form/element/control/input.js": "./dist/_app_/components/bs-form/element/control/input.js",
+      "./components/bs-form/element/control/radio.js": "./dist/_app_/components/bs-form/element/control/radio.js",
+      "./components/bs-form/element/control/switch.js": "./dist/_app_/components/bs-form/element/control/switch.js",
+      "./components/bs-form/element/control/textarea.js": "./dist/_app_/components/bs-form/element/control/textarea.js",
+      "./components/bs-form/element/errors.js": "./dist/_app_/components/bs-form/element/errors.js",
+      "./components/bs-form/element/feedback-icon.js": "./dist/_app_/components/bs-form/element/feedback-icon.js",
+      "./components/bs-form/element/help-text.js": "./dist/_app_/components/bs-form/element/help-text.js",
+      "./components/bs-form/element/label.js": "./dist/_app_/components/bs-form/element/label.js",
+      "./components/bs-form/element/layout/horizontal.js": "./dist/_app_/components/bs-form/element/layout/horizontal.js",
+      "./components/bs-form/element/layout/horizontal/checkbox.js": "./dist/_app_/components/bs-form/element/layout/horizontal/checkbox.js",
+      "./components/bs-form/element/layout/inline.js": "./dist/_app_/components/bs-form/element/layout/inline.js",
+      "./components/bs-form/element/layout/inline/checkbox.js": "./dist/_app_/components/bs-form/element/layout/inline/checkbox.js",
+      "./components/bs-form/element/layout/vertical.js": "./dist/_app_/components/bs-form/element/layout/vertical.js",
+      "./components/bs-form/element/layout/vertical/checkbox.js": "./dist/_app_/components/bs-form/element/layout/vertical/checkbox.js",
+      "./components/bs-form/element/legend.js": "./dist/_app_/components/bs-form/element/legend.js",
+      "./components/bs-link-to.js": "./dist/_app_/components/bs-link-to.js",
+      "./components/bs-list-group.js": "./dist/_app_/components/bs-list-group.js",
+      "./components/bs-list-group/item.js": "./dist/_app_/components/bs-list-group/item.js",
+      "./components/bs-modal-simple.js": "./dist/_app_/components/bs-modal-simple.js",
+      "./components/bs-modal.js": "./dist/_app_/components/bs-modal.js",
+      "./components/bs-modal/body.js": "./dist/_app_/components/bs-modal/body.js",
+      "./components/bs-modal/dialog.js": "./dist/_app_/components/bs-modal/dialog.js",
+      "./components/bs-modal/footer.js": "./dist/_app_/components/bs-modal/footer.js",
+      "./components/bs-modal/header.js": "./dist/_app_/components/bs-modal/header.js",
+      "./components/bs-modal/header/close.js": "./dist/_app_/components/bs-modal/header/close.js",
+      "./components/bs-modal/header/title.js": "./dist/_app_/components/bs-modal/header/title.js",
+      "./components/bs-nav.js": "./dist/_app_/components/bs-nav.js",
+      "./components/bs-nav/item.js": "./dist/_app_/components/bs-nav/item.js",
+      "./components/bs-navbar.js": "./dist/_app_/components/bs-navbar.js",
+      "./components/bs-navbar/content.js": "./dist/_app_/components/bs-navbar/content.js",
+      "./components/bs-navbar/link-to.js": "./dist/_app_/components/bs-navbar/link-to.js",
+      "./components/bs-navbar/nav.js": "./dist/_app_/components/bs-navbar/nav.js",
+      "./components/bs-navbar/toggle.js": "./dist/_app_/components/bs-navbar/toggle.js",
+      "./components/bs-popover.js": "./dist/_app_/components/bs-popover.js",
+      "./components/bs-popover/element.js": "./dist/_app_/components/bs-popover/element.js",
+      "./components/bs-progress.js": "./dist/_app_/components/bs-progress.js",
+      "./components/bs-progress/bar.js": "./dist/_app_/components/bs-progress/bar.js",
+      "./components/bs-spinner.js": "./dist/_app_/components/bs-spinner.js",
+      "./components/bs-tab.js": "./dist/_app_/components/bs-tab.js",
+      "./components/bs-tab/pane.js": "./dist/_app_/components/bs-tab/pane.js",
+      "./components/bs-tooltip.js": "./dist/_app_/components/bs-tooltip.js",
+      "./components/bs-tooltip/element.js": "./dist/_app_/components/bs-tooltip/element.js",
+      "./config.js": "./dist/_app_/config.js",
+      "./helpers/bs-contains.js": "./dist/_app_/helpers/bs-contains.js",
+      "./helpers/bs-default.js": "./dist/_app_/helpers/bs-default.js",
+      "./helpers/bs-eq.js": "./dist/_app_/helpers/bs-eq.js",
+      "./helpers/bs-form-horiz-input-class.js": "./dist/_app_/helpers/bs-form-horiz-input-class.js",
+      "./helpers/bs-form-horiz-offset-class.js": "./dist/_app_/helpers/bs-form-horiz-offset-class.js",
+      "./helpers/bs-noop.js": "./dist/_app_/helpers/bs-noop.js",
+      "./helpers/bs-size-class.js": "./dist/_app_/helpers/bs-size-class.js",
+      "./helpers/bs-type-class.js": "./dist/_app_/helpers/bs-type-class.js",
+      "./initializers/load-bootstrap-config.js": "./dist/_app_/initializers/load-bootstrap-config.js",
+      "./utils/decorators/arg.js": "./dist/_app_/utils/decorators/arg.js",
+      "./utils/decorators/uses-transition.js": "./dist/_app_/utils/decorators/uses-transition.js",
+      "./utils/dom.js": "./dist/_app_/utils/dom.js",
+      "./utils/form-validation-class.js": "./dist/_app_/utils/form-validation-class.js",
+      "./utils/is-fastboot.js": "./dist/_app_/utils/is-fastboot.js",
+      "./utils/size-class.js": "./dist/_app_/utils/size-class.js",
+      "./utils/transition-end.js": "./dist/_app_/utils/transition-end.js",
+      "./version.js": "./dist/_app_/version.js",
+      "./_rollupPluginBabelHelpers-9wjJaosZ.js": "./dist/_app_/_rollupPluginBabelHelpers-9wjJaosZ.js"
+    }
+  },
+  "release-it": {
+    "plugins": {
+      "@release-it-plugins/lerna-changelog": {
+        "infile": "CHANGELOG.md",
+        "launchEditor": true
+      }
+    },
+    "git": {
+      "tagName": "v${version}"
+    },
+    "github": {
+      "release": true,
+      "tokenRef": "GITHUB_AUTH"
+    }
+  }
+}
