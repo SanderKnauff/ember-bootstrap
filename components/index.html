@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ember Bootstrap</title>
+    <meta name="description" content="An ember-cli addon for using Bootstrap in Ember.js applications.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="ember-bootstrap-docs/config/environment" content="%7B%22modulePrefix%22%3A%22ember-bootstrap-docs%22%2C%22environment%22%3A%22production%22%2C%22rootURL%22%3A%22%2F%22%2C%22locationType%22%3A%22history%22%2C%22EmberENV%22%3A%7B%22EXTEND_PROTOTYPES%22%3Afalse%2C%22FEATURES%22%3A%7B%7D%2C%22_APPLICATION_TEMPLATE_WRAPPER%22%3Afalse%2C%22_DEFAULT_ASYNC_OBSERVERS%22%3Atrue%2C%22_JQUERY_INTEGRATION%22%3Afalse%2C%22_TEMPLATE_ONLY_GLIMMER_COMPONENTS%22%3Atrue%7D%2C%22APP%22%3A%7B%22name%22%3A%22ember-bootstrap-docs%22%2C%22version%22%3A%226.1.0%2Be563c14b%22%7D%2C%22contentSecurityPolicy%22%3A%7B%22default-src%22%3A%5B%22'none'%22%5D%2C%22script-src%22%3A%5B%22'self'%22%2C%22'sha256-1xtiB6mV1iIKZ5iz9CxA5lEnfEg8d0XEH3FL9L8NBqo%3D'%22%2C%22use.typekit.net%22%5D%2C%22font-src%22%3A%5B%22'self'%22%2C%22use.typekit.net%22%2C%22use.fontawesome.com%22%5D%2C%22connect-src%22%3A%5B%22'self'%22%2C%22performance.typekit.net%22%5D%2C%22img-src%22%3A%5B%22'self'%22%2C%22data%3A%22%2C%22p.typekit.net%22%5D%2C%22style-src%22%3A%5B%22'self'%22%2C%22'unsafe-inline'%22%2C%22use.typekit.net%22%2C%22use.fontawesome.com%22%5D%2C%22media-src%22%3A%5B%22'self'%22%5D%2C%22frame-src%22%3A%5B%22https%3A%2F%2Fghbtns.com%2F%22%5D%7D%2C%22fastboot%22%3A%7B%22hostWhitelist%22%3A%5B%7B%7D%5D%7D%7D" />
+<!-- EMBER_CLI_FASTBOOT_TITLE -->
+
+    <link integrity="" rel="stylesheet" href="/assets/vendor-59748aafe551f9ea09e7ba5ee997e867.css">
+    <link integrity="" rel="stylesheet" href="/assets/ember-bootstrap-docs-770ae5a8ef05c1105458ee71d41de5d1.css">
+
+    <script type="text/javascript" src="https://use.typekit.net/dkq5epu.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    
+  </head>
+  <body>
+    <script type="x/boundary" id="fastboot-body-start"></script>    <nav class="navbar  navbar-dark navbar-expand-lg bg-primary">
+      <div class="container">
+        
+    <a id="ember14" class="ember-view navbar-brand" href="/">
+      ember-bootstrap
+    </a>
+    <button class="navbar-toggler
+  collapsed" type="button">
+    <span class="navbar-toggler-icon"></span>
+</button>
+
+    <div class="collapse   navbar-collapse justify-content-between">
+  
+  
+      <ul class="nav  navbar-nav   ">
+  
+        <li class="nav-item">
+  
+          <a id="ember15" class="ember-view nav-link" href="/getting-started">
+  
+  
+            Getting Started
+          
+
+</a>
+        
+</li>
+
+        <li class="nav-item">
+  
+          <a id="ember16" class="ember-view active nav-link" href="/components">
+  
+  
+            Components
+          
+
+</a>
+        
+</li>
+
+        <li class="nav-item">
+  
+          <a href="/api" class="nav-link">
+            API
+          </a>
+        
+</li>
+
+        <li class="nav-item">
+  
+          <a id="ember17" class="ember-view nav-link" href="/addons">
+  
+  
+            Addons
+          
+
+</a>
+        
+</li>
+
+      
+</ul>
+      <ul class="nav  navbar-nav   ">
+  
+        <li class="nav-item">
+  
+          <a href="https://discord.gg/zT3asNS" class="nav-link" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-discord"></i>
+            e-bootstrap
+          </a>
+        
+</li>
+
+        <li class="nav-item">
+  
+          <a href="https://twitter.com/simonihmig" class="nav-link" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-twitter"></i>
+          </a>
+        
+</li>
+
+        <li class="nav-item visible-sm-block visible-xs-block">
+  
+          <a href="https://github.com/kaliber5/ember-bootstrap" class="nav-link" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-github"></i>
+          </a>
+        
+</li>
+
+        <li class="nav-item hidden-sm hidden-xs">
+  
+          <div class="navbar-text">
+            <iframe src="https://ghbtns.com/github-btn.html?user=kaliber5&amp;repo=ember-bootstrap&amp;type=star&amp;count=true" frameborder="0" scrolling="0" width="100px" height="20px" title="Github Stars"></iframe>
+          </div>
+        
+</li>
+
+      
+</ul>
+    
+
+</div>
+
+
+  
+      </div>
+  </nav>
+
+<div class="container mt-4">
+  <div class="row">
+  <div class="col-sm-4 col-md-3 order-last">
+    <h3 class="sr-only">
+      Components
+    </h3>
+    <ul class="nav nav-pills   flex-column ">
+  
+        <li class="nav-item">
+  
+          <a id="ember18" class="ember-view nav-link" href="/components/accordion">
+  
+            Accordion
+          
+</a>
+        
+</li>
+
+        <li class="nav-item">
+  
+          <a id="ember19" class="ember-view nav-link" href="/components/alert">
+  
+            Alert
+          
+</a>
+        
+</li>
+
+        <li class="nav-item">
+  
+          <a id="ember20" class="ember-view nav-link" href="/components/button">
+  
+            Button
+          
+</a>
+        
+</li>
+
+        <li class="nav-item">
+  
+          <a id="ember21" class="ember-view nav-link" href="/components/button-group">
+  
+            Button Group
+          
+</a>
+        
+</li>
+
+        <li class="nav-item">
+  
+          <a id="ember22" class="ember-view nav-link" href="/components/carousel">
+  
+            Carousel
+          
+</a>
+        
+</li>
+
+        <li class="nav-item">
+  
+          <a id="ember23" class="ember-view nav-link" href="/components/collapse">
+  
+            Collapse
+          
+</a>
+        
+</li>
+
+        <li class="nav-item">
+  
+          <a id="ember24" class="ember-view nav-link" href="/components/dropdown">
+  
+            Dropdown
+          
+</a>
+        
+</li>
+
+        <li class="nav-item">
+  
+          <a id="ember25" class="ember-view nav-link" href="/components/forms">
+  
+            Form
+          
+</a>
+        
+</li>
+
+        <li class="nav-item">
+  
+          <a id="ember26" class="ember-view nav-link" href="/components/list-group">
+  
+            List Group
+          
+</a>
+        
+</li>
+
+        <li class="nav-item">
+  
+          <a id="ember27" class="ember-view nav-link" href="/components/modal">
+  
+            Modal
+          
+</a>
+        
+</li>
+
+        <li class="nav-item">
+  
+          <a id="ember28" class="ember-view nav-link" href="/components/navbars">
+  
+            Navbar
+          
+</a>
+        
+</li>
+
+        <li class="nav-item">
+  
+          <a id="ember29" class="ember-view nav-link" href="/components/navs">
+  
+            Nav
+          
+</a>
+        
+</li>
+
+        <li class="nav-item">
+  
+          <a id="ember30" class="ember-view nav-link" href="/components/popover">
+  
+            Popover
+          
+</a>
+        
+</li>
+
+        <li class="nav-item">
+  
+          <a id="ember31" class="ember-view nav-link" href="/components/progress">
+  
+            Progress
+          
+</a>
+        
+</li>
+
+        <li class="nav-item">
+  
+          <a id="ember32" class="ember-view nav-link" href="/components/spinner">
+  
+            Spinner
+          
+</a>
+        
+</li>
+
+        <li class="nav-item">
+  
+          <a id="ember33" class="ember-view nav-link" href="/components/tabs">
+  
+            Tabs
+          
+</a>
+        
+</li>
+
+        <li class="nav-item">
+  
+          <a id="ember34" class="ember-view nav-link" href="/components/tooltip">
+  
+            Tooltip
+          
+</a>
+        
+</li>
+
+    
+</ul>
+  </div>
+  <div class="col-sm-8 col-sm-pull-4 col-md-9 col-md-pull-3">
+<!---->    <h1>
+  Components
+</h1>
+<p>
+  The following components are currently available as native Ember components:
+</p>
+<table class="table">
+  <thead>
+    <tr>
+      <th>
+        Component
+      </th>
+      <th>
+        Demo
+      </th>
+      <th>
+        API Docs
+      </th>
+      <th>
+        Bootstrap Docs
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th scope="row">
+          Accordion
+        </th>
+        <td>
+          <a id="ember35" class="ember-view" href="/components/accordion">Demo</a>
+        </td>
+        <td>
+          <a href="/api/classes/Components.Accordion.html">
+            API Docs
+          </a>
+        </td>
+        <td>
+          <a href="https://getbootstrap.com/docs/4.3/components/collapse/#accordion-example">
+            Bootstrap Docs
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          Alert
+        </th>
+        <td>
+          <a id="ember36" class="ember-view" href="/components/alert">Demo</a>
+        </td>
+        <td>
+          <a href="/api/classes/Components.Alert.html">
+            API Docs
+          </a>
+        </td>
+        <td>
+          <a href="https://getbootstrap.com/docs/4.3/components/alerts/">
+            Bootstrap Docs
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          Button
+        </th>
+        <td>
+          <a id="ember37" class="ember-view" href="/components/button">Demo</a>
+        </td>
+        <td>
+          <a href="/api/classes/Components.Button.html">
+            API Docs
+          </a>
+        </td>
+        <td>
+          <a href="https://getbootstrap.com/docs/4.3/components/buttons/">
+            Bootstrap Docs
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          Button Group
+        </th>
+        <td>
+          <a id="ember38" class="ember-view" href="/components/button-group">Demo</a>
+        </td>
+        <td>
+          <a href="/api/classes/Components.ButtonGroup.html">
+            API Docs
+          </a>
+        </td>
+        <td>
+          <a href="https://getbootstrap.com/docs/4.3/components/button-group/">
+            Bootstrap Docs
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          Carousel
+        </th>
+        <td>
+          <a id="ember39" class="ember-view" href="/components/carousel">Demo</a>
+        </td>
+        <td>
+          <a href="/api/classes/Components.Carousel.html">
+            API Docs
+          </a>
+        </td>
+        <td>
+          <a href="https://getbootstrap.com/docs/4.3/components/carousel/">
+            Bootstrap Docs
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          Collapse
+        </th>
+        <td>
+          <a id="ember40" class="ember-view" href="/components/collapse">Demo</a>
+        </td>
+        <td>
+          <a href="/api/classes/Components.Collapse.html">
+            API Docs
+          </a>
+        </td>
+        <td>
+          <a href="https://getbootstrap.com/docs/4.3/components/collapse/">
+            Bootstrap Docs
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          Dropdown
+        </th>
+        <td>
+          <a id="ember41" class="ember-view" href="/components/dropdown">Demo</a>
+        </td>
+        <td>
+          <a href="/api/classes/Components.Dropdown.html">
+            API Docs
+          </a>
+        </td>
+        <td>
+          <a href="https://getbootstrap.com/docs/4.3/components/dropdowns/">
+            Bootstrap Docs
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          Form
+        </th>
+        <td>
+          <a id="ember42" class="ember-view" href="/components/forms">Demo</a>
+        </td>
+        <td>
+          <a href="/api/classes/Components.Form.html">
+            API Docs
+          </a>
+        </td>
+        <td>
+          <a href="https://getbootstrap.com/docs/4.3/components/forms/">
+            Bootstrap Docs
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          List Group
+        </th>
+        <td>
+          <a id="ember43" class="ember-view" href="/components/list-group">Demo</a>
+        </td>
+        <td>
+          <a href="/api/classes/Components.ListGroup.html">
+            API Docs
+          </a>
+        </td>
+        <td>
+          <a href="https://getbootstrap.com/docs/5.2/components/list-group/">
+            Bootstrap Docs
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          Modal
+        </th>
+        <td>
+          <a id="ember44" class="ember-view" href="/components/modal">Demo</a>
+        </td>
+        <td>
+          <a href="/api/classes/Components.Modal.html">
+            API Docs
+          </a>
+        </td>
+        <td>
+          <a href="https://getbootstrap.com/docs/4.3/components/modal/">
+            Bootstrap Docs
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          Navbar
+        </th>
+        <td>
+          <a id="ember45" class="ember-view" href="/components/navbars">Demo</a>
+        </td>
+        <td>
+          <a href="/api/classes/Components.Navbar.html">
+            API Docs
+          </a>
+        </td>
+        <td>
+          <a href="https://getbootstrap.com/docs/4.3/components/navbar/">
+            Bootstrap Docs
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          Nav
+        </th>
+        <td>
+          <a id="ember46" class="ember-view" href="/components/navs">Demo</a>
+        </td>
+        <td>
+          <a href="/api/classes/Components.Nav.html">
+            API Docs
+          </a>
+        </td>
+        <td>
+          <a href="https://getbootstrap.com/docs/4.3/components/navs/">
+            Bootstrap Docs
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          Popover
+        </th>
+        <td>
+          <a id="ember47" class="ember-view" href="/components/popover">Demo</a>
+        </td>
+        <td>
+          <a href="/api/classes/Components.Popover.html">
+            API Docs
+          </a>
+        </td>
+        <td>
+          <a href="https://getbootstrap.com/docs/4.3/components/popovers/">
+            Bootstrap Docs
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          Progress
+        </th>
+        <td>
+          <a id="ember48" class="ember-view" href="/components/progress">Demo</a>
+        </td>
+        <td>
+          <a href="/api/classes/Components.Progress.html">
+            API Docs
+          </a>
+        </td>
+        <td>
+          <a href="https://getbootstrap.com/docs/4.3/components/progress/">
+            Bootstrap Docs
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          Spinner
+        </th>
+        <td>
+          <a id="ember49" class="ember-view" href="/components/spinner">Demo</a>
+        </td>
+        <td>
+          <a href="/api/classes/Components.Spinner.html">
+            API Docs
+          </a>
+        </td>
+        <td>
+          <a href="https://getbootstrap.com/docs/4.6/components/spinners/">
+            Bootstrap Docs
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          Tabs
+        </th>
+        <td>
+          <a id="ember50" class="ember-view" href="/components/tabs">Demo</a>
+        </td>
+        <td>
+          <a href="/api/classes/Components.Tab.html">
+            API Docs
+          </a>
+        </td>
+        <td>
+          <a href="https://getbootstrap.com/docs/4.3/components/navs/#tabs">
+            Bootstrap Docs
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">
+          Tooltip
+        </th>
+        <td>
+          <a id="ember51" class="ember-view" href="/components/tooltip">Demo</a>
+        </td>
+        <td>
+          <a href="/api/classes/Components.Tooltip.html">
+            API Docs
+          </a>
+        </td>
+        <td>
+          <a href="https://getbootstrap.com/docs/4.3/components/tooltips/">
+            Bootstrap Docs
+          </a>
+        </td>
+      </tr>
+  </tbody>
+</table>
+  </div>
+</div>
+</div><script type="x/boundary" id="fastboot-body-end"></script>
+
+    <script src="/assets/vendor-8a6f0d5d24e18a79589fbc49bf748d86.js"></script>
+<script src="/assets/chunk.65.81f5ea30d56f4b7db280.js"></script>
+<script src="/assets/chunk.143.3623da005ccbf92323c9.js"></script>
+    <script src="/assets/ember-bootstrap-docs-824abe2fc73018f75a604494adb02a63.js"></script>
+
+    <div id="ember-bootstrap-wormhole"></div>
+<div id="ember-basic-dropdown-wormhole"></div>
+  </body>
+</html>
