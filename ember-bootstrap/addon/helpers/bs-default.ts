@@ -1,5 +1,6 @@
-export default function bsDefaultHelper<PRIMARY, SECONDARY>(
-  ...[primary, secondary]: [PRIMARY | undefined, SECONDARY]
-): PRIMARY | SECONDARY {
-  return primary ?? secondary;
+export default function bsDefault<T, U>(
+  primary: T,
+  secondary: U,
+): T extends NonNullable<unknown> ? T : U {
+  return (primary ?? secondary) as T extends NonNullable<unknown> ? T : U;
 }
