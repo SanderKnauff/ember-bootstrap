@@ -4,18 +4,13 @@
 as |Title Close|
 }}
   <div class="modal-header" ...attributes>
-    {{#if (has-block-params)}}
-      {{yield (hash title=Title close=Close)
-      }}
+    {{#if (has-block)}}
+      {{yield (hash title=Title close=Close)}}
     {{else}}
-      {{#if (has-block)}}
-        {{yield (hash title=Title close=Close)}}
-      {{else}}
-        <Title>{{@title}}</Title>
-      {{/if}}
-      {{#if (bs-default @closeButton true)}}
-        <Close/>
-      {{/if}}
+      <Title>{{@title}}</Title>
+    {{/if}}
+    {{#if (bs-default @closeButton true)}}
+      <Close/>
     {{/if}}
   </div>
 {{/let}}
