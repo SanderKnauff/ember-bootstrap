@@ -1240,6 +1240,7 @@ module('Integration | Component | bs-form/element', function (hooks) {
     assert
       .dom(`[data-test-form-element] .${formFeedbackClass()}`)
       .hasText('Invalid');
+    /* eslint-disable-next-line ember/no-runloop */
     run(() => {
       state.errors = A();
     });
@@ -1288,6 +1289,7 @@ module('Integration | Component | bs-form/element', function (hooks) {
     assert
       .dom(`[data-test-form-element] .${formFeedbackClass()}`)
       .hasText('Insecure');
+    /* eslint-disable-next-line ember/no-runloop */
     run(() => {
       state.warnings = A();
     });
@@ -1368,6 +1370,7 @@ module('Integration | Component | bs-form/element', function (hooks) {
     assert
       .dom(`[data-test-form-element] .${formFeedbackClass()}`)
       .hasText('some error');
+    /* eslint-disable-next-line ember/no-runloop */
     run(() => {
       state.error = null;
     });
@@ -1408,6 +1411,7 @@ module('Integration | Component | bs-form/element', function (hooks) {
     assert
       .dom(`[data-test-form-element] .${formFeedbackClass()}`)
       .hasText('some warning');
+    /* eslint-disable-next-line ember/no-runloop */
     run(() => {
       state.warning = null;
     });
@@ -1475,6 +1479,7 @@ module('Integration | Component | bs-form/element', function (hooks) {
       assert
         .dom(`[data-test-form-element] .${formFeedbackClass()}`)
         .hasText('Invalid', 'Validation error is shown');
+      /* eslint-disable-next-line ember/no-runloop */
       run(() => {
         state.errors = A();
       });
