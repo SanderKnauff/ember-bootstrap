@@ -1,7 +1,6 @@
 import { module } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
 import { click, render } from '@ember/test-helpers';
-import { hbs } from 'ember-cli-htmlbars';
 import {
   accordionClassFor,
   accordionItemBodyClass,
@@ -14,7 +13,7 @@ import {
 } from '../../../helpers/bootstrap';
 import setupNoDeprecations from '../../../helpers/setup-no-deprecations';
 import sinon from 'sinon';
-import BsAccordionItem from 'ember-bootstrap/component/bs-accordion/item';
+import BsAccordionItem from 'ember-bootstrap/components/bs-accordion/item';
 
 module('Integration | Component | bs-accordion-item', function (hooks) {
   setupRenderingTest(hooks);
@@ -90,12 +89,14 @@ module('Integration | Component | bs-accordion-item', function (hooks) {
   test('accordion items can be disabled', async function (assert) {
     const clickAction = sinon.spy();
     await render(
-      hbs`<BsAccordion::Item
-  @value={{1}}
-  @disabled={{true}}
-  @onClick={{clickAction}}
-  @title='TITLE'
->CONTENT</BsAccordion::Item>`,
+      <template>
+        <BsAccordionItem
+          @value={{1}}
+          @disabled={{true}}
+          @onClick={{clickAction}}
+          @title='TITLE'
+        >CONTENT</BsAccordionItem>
+      </template>,
     );
     assert
       .dom(accordionItemClickableSelector())

@@ -89,7 +89,7 @@ module('Integration | Component | bs-modal-simple', function (hooks) {
           @closeTitle='Cancel'
           @submitTitle='Ok'
         >Hello world!</BsModalSimple>
-      </template>
+      </template>,
     );
 
     assert
@@ -114,7 +114,7 @@ module('Integration | Component | bs-modal-simple', function (hooks) {
           @submitTitle='Ok'
           @submitButtonType='danger'
         >Hello world!</BsModalSimple>
-      </template>
+      </template>,
     );
 
     assert
@@ -482,7 +482,7 @@ module('Integration | Component | bs-modal-simple', function (hooks) {
           @submitTitle='Ok'
           @onSubmit={{testAction}}
         >Hello world!</BsModalSimple>
-      </template>
+      </template>,
     );
     await click('.modal .modal-footer button.btn-primary');
     assert.ok(testAction.calledOnce);
@@ -499,7 +499,7 @@ module('Integration | Component | bs-modal-simple', function (hooks) {
           @submitTitle='Ok'
           @onSubmit={{modalSubmit}}
         ><BsForm @onSubmit={{formSubmit}} /></BsModalSimple>
-      </template>
+      </template>,
     );
     await click('.modal .modal-footer button.btn-primary');
     assert.ok(formSubmit.calledOnce);
