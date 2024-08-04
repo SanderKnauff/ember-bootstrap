@@ -832,7 +832,7 @@ module('Integration | Component | bs-form', function (hooks) {
     await render(
       <template>
         <BsForm @onSubmit={{submit}} as |form|>
-          <a href='#' role='button' onclick={{action form.submit}}>submit</a>
+          <a href='#' role='button' {{on 'click' form.submit}}>submit</a>
         </BsForm>
       </template>,
     );
