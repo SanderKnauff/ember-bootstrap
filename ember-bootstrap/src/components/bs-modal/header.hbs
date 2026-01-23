@@ -1,0 +1,30 @@
+{{#let
+  this.titleComponent
+  (component this.closeComponent onClick=@onClose)
+as |Title Close|
+}}
+  <div class="modal-header" ...attributes>
+    {{#if (has-block-params)}}
+      {{yield
+        (hash
+          title=Title
+          close=Close
+        )
+      }}
+    {{else}}
+      {{#if (has-block)}}
+        {{yield
+          (hash
+            title=Title
+            close=Close
+          )
+        }}
+      {{else}}
+        <Title>{{@title}}</Title>
+      {{/if}}
+      {{#if (bs-default @closeButton true)}}
+        <Close/>
+      {{/if}}
+    {{/if}}
+  </div>
+{{/let}}

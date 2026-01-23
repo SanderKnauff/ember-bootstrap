@@ -1,6 +1,8 @@
 {
   "extends": "@tsconfig/ember/tsconfig.json",
   "compilerOptions": {
+    "allowImportingTsExtensions": true,
+
     // allow declarations to be emitted when despite having glint-nocheck directives.
     // See https://github.com/typed-ember/glint/issues/599
     "noEmitOnError": false,
@@ -12,9 +14,9 @@
     // work with TypeScript.
     "baseUrl": ".",
     "paths": {
-      "ember-bootstrap": ["addon"],
-      "ember-bootstrap/*": ["addon/*"],
-      "*": ["types/*"]
+      "ember-bootstrap": ["ember-bootstrap"],
+      "ember-bootstrap/*": ["ember-bootstrap/*"],
+      "*": ["unpublished-development-types/*"]
     }
   },
   "glint": {

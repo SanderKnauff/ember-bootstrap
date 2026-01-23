@@ -1,0 +1,33 @@
+{{#let
+  (component this.titleComponent collapsed=this.collapsed disabled=@disabled onClick=(fn (bs-default @onClick (bs-noop)) this.value))
+  (component this.bodyComponent collapsed=this.collapsed)
+  (unique-id)
+  (unique-id)
+as |Title Body titleId collapsableId|
+}}
+  <div
+    class="{{if @disabled "disabled"}} {{this.typeClass}} {{if (macroCondition (macroGetOwnConfig "isBS4")) "card"}} {{if (macroCondition (macroGetOwnConfig "isBS5")) "accordion-item"}}"
+    ...attributes
+  >
+    {{#if (has-block-params)}}
+      {{yield
+        (hash
+          title=Title
+          body=Body
+        )
+      }}
+    {{else}}
+      <Title id={{titleId}} @controls={{collapsableId}}>
+        {{@title}}
+      </Title>
+      <Body @collapsableId={{collapsableId}} @describedby={{titleId}}>
+        {{yield
+          (hash
+            title=Title
+            body=Body
+          )
+        }}
+      </Body>
+    {{/if}}
+  </div>
+{{/let}}
