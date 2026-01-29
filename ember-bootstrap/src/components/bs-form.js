@@ -133,7 +133,7 @@ export default class Form extends Component {
    */
   get layoutClass() {
     let layout = this.formLayout;
-    if (macroCondition(getOwnConfig().isBS4)) {
+    if (macroCondition(getOwnConfig()?.isBS4 ?? false)) {
       return layout === 'inline' ? 'form-inline' : null;
     } else {
       return null;

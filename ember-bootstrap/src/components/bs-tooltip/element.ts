@@ -20,7 +20,9 @@ type BsTooltipElementSignature = ContextualHelpElementSignature & {
  @private
  */
 export default class TooltipElement extends ContextualHelpElement<BsTooltipElementSignature> {
-  arrowClass = macroCondition(getOwnConfig<EmberBootstrapMacrosConfig>().isBS4)
+  arrowClass = macroCondition(
+    getOwnConfig<EmberBootstrapMacrosConfig>()?.isBS4 ?? false,
+  )
     ? 'arrow'
     : 'tooltip-arrow';
   placementClassPrefix = 'bs-tooltip-';

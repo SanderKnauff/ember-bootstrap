@@ -24,19 +24,19 @@ import type Owner from '@ember/owner';
 const TRANSITION_DURATION = 50;
 
 const INDICATOR_ELEMENT = macroCondition(
-  getConfig<EmberBootstrapMacrosConfig>('ember-bootstrap').isBS5,
+  getConfig<EmberBootstrapMacrosConfig>('ember-bootstrap')?.isBS5 ?? true,
 )
   ? 'button'
   : 'li';
 
 const DIRECTION_NEXT = macroCondition(
-  getConfig<EmberBootstrapMacrosConfig>('ember-bootstrap').isBS5,
+  getConfig<EmberBootstrapMacrosConfig>('ember-bootstrap')?.isBS5 ?? true,
 )
   ? 'start'
   : 'left';
 
 const DIRECTION_PREVIOUS = macroCondition(
-  getConfig<EmberBootstrapMacrosConfig>('ember-bootstrap').isBS5,
+  getConfig<EmberBootstrapMacrosConfig>('ember-bootstrap')?.isBS5 ?? true,
 )
   ? 'end'
   : 'right';
